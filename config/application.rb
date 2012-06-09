@@ -1,5 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 
+<<<<<<< HEAD
 # Pick the frameworks you want:
 require "active_record/railtie"
 require "action_controller/railtie"
@@ -14,6 +15,13 @@ if defined?(Bundler)
   # If you want your assets lazily compiled in production, use this line
   # Bundler.require(:default, :assets, Rails.env)
 end
+=======
+require 'rails/all'
+
+# If you have a Gemfile, require the gems listed there, including any gems
+# you've limited to :test, :development, or :production.
+Bundler.require(:default, Rails.env) if defined?(Bundler)
+>>>>>>> d9a068a7d9e6be674ff1fea63cd582264980997a
 
 module SampleApp
   class Application < Rails::Application
@@ -39,11 +47,18 @@ module SampleApp
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+<<<<<<< HEAD
+=======
+    # JavaScript files you want as :defaults (application.js is always included).
+    # config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
+
+>>>>>>> d9a068a7d9e6be674ff1fea63cd582264980997a
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+<<<<<<< HEAD
 
     # Use SQL instead of Active Record's schema dumper when creating the database.
     # This is necessary if your schema can't be completely dumped by the schema dumper,
@@ -61,5 +76,13 @@ module SampleApp
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+=======
+    ### Part of a Spork hack.
+    if Rails.env.test?
+      initializer :after => :initialize_dependency_mechanism do
+        ActiveSupport::Dependencies.mechanism = :load
+      end
+    end
+>>>>>>> d9a068a7d9e6be674ff1fea63cd582264980997a
   end
 end

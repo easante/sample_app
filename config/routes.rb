@@ -1,4 +1,19 @@
 SampleApp::Application.routes.draw do
+<<<<<<< HEAD
+=======
+  get "users/new"
+
+  root :to => 'pages#home'
+
+  match '/contact', :to => 'pages#contact'
+
+  match '/about', :to => 'pages#about'
+
+  match '/help', :to => 'pages#help'
+
+  match '/signup', :to => 'users#new'
+
+>>>>>>> d9a068a7d9e6be674ff1fea63cd582264980997a
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,11 +63,19 @@ SampleApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
+<<<<<<< HEAD
   # root :to => 'welcome#index'
+=======
+  # root :to => "welcome#index"
+>>>>>>> d9a068a7d9e6be674ff1fea63cd582264980997a
 
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
+<<<<<<< HEAD
   # match ':controller(/:action(/:id))(.:format)'
+=======
+  # match ':controller(/:action(/:id(.:format)))'
+>>>>>>> d9a068a7d9e6be674ff1fea63cd582264980997a
 end

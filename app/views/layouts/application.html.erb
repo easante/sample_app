@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
 <head>
   <title>SampleApp</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -11,4 +12,20 @@
 <%= yield %>
 
 </body>
+=======
+  <head>
+    <title><%= title %></title>
+    <%= csrf_meta_tag %>
+    <%= render 'layouts/stylesheets' %>
+  </head>
+  <body>
+    <div class="container">
+      <%= render 'layouts/header' %>
+      <section class="round">
+        <%= yield %>
+      </section>
+      <%= render 'layouts/footer' %>
+    </div>
+  </body>
+>>>>>>> d9a068a7d9e6be674ff1fea63cd582264980997a
 </html>
